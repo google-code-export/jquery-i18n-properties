@@ -8,7 +8,7 @@
       
       	<!-- JS -->
       	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
-      	<script type="text/javascript" src="jquery.i18n.properties.js"></script>
+      	<script type="text/javascript" src="jquery.i18n.properties-min.js"></script>
       	
       	<!-- CSS -->
         <link rel="stylesheet" href="css/blueprint/screen.css" type="text/css" media="screen, projection">
@@ -43,7 +43,7 @@
 			});
 			// ... and configure links to show/hide them
 			jQuery('a.toggle').bind('click', function() {
-			  jQuery(this).next('code').slideToggle();
+				jQuery(this).next('code').slideToggle();
 				return false;
 			});
 		});
@@ -76,53 +76,50 @@
 			// Accessing values through a JS variable
 			var ex21 = 'msg_hello';
 			var ex22 = 'msg_world';
-			var ex23 = 'msg_complex'; var ex23P = 'John'; 
-			var ex24 = 'inexistent_key';
+			var ex23 = 'msg_complex'; var ex23P = 'John';
 			jQuery('#varExamples')
 				.empty()
 				.append('<li><code class="i18n">'+ex21+'</code>  -->  '+eval(ex21)+'</li>')
 				.append('<li><code class="i18n">'+ex22+'</code>  -->  '+eval(ex22)+'</li>')
-				.append('<li><code class="i18n">'+ex23+'(\''+ex23P+'\')</code>  -->  '+eval(ex23+'(\''+ex23P+'\')')+'</li>')
-				.append('<li><code class="i18n">'+ex24+'</code>  -->  <small><i>(browser would report a missing JS symbol)</i></small></li>');
+				.append('<li><code class="i18n">'+ex23+',(\''+ex23P+'\')</code>  -->  '+eval(ex23+'(\''+ex23P+'\')')+'</li>');
 		}
       </script>
    </HEAD>
    
    <BODY>
-      <h2>jQuery.i18n.properties :: Demo</h2>
+      <h2>jQuery.i18.properties :: Demo</h2>
       
-      <div class="left">
-        <h3>I18N Bundles</h3>
-        <h4>Messages.properties</h4>
-  	    <a href="#" class="toggle">[toggle contents]</a>
-        <code class="files"></code><br/>
-        
-        <h4>Messages_pt.properties</h4>
-        <a href="#" class="toggle">[toggle contents]</a>
-        <code class="files"></code><br/>
-        
-        <h4>Messages_pt_PT.properties</h4>
-        <a href="#" class="toggle">[toggle contents]</a>
-        <code class="files"></code><p/><p/><p/>
-        
-        
-        <h3>Examples</h3>
-        <div id="langBox">
-  	      Language:
-  	      <select id="lang">
-  			<option value="browser">Indicated by the browser</option>
-  			<option value="en">en</option>
-  			<option value="pt">pt</option>
-  			<option value="pt_PT" selected>pt_PT</option>
-  		  </select>
-  		  <span id="langBrowser"></span>
-  	  </div>
-        
-        <h4>Accessing values through the map</h4>
-        <ul id="mapExamples"></ul>
-        
-        <h4>Accessing values through a JS variable</h4>
-        <ul id="varExamples"></ul>
-      </div>
+      <h3>I18N Bundles</h3>
+      <h4>Messages.properties</h4>
+	  <a href="#" class="toggle">[toggle contents]</a>
+      <code class="files"></code><br/>
+      
+      <h4>Messages_pt.properties</h4>
+      <a href="#" class="toggle">[toggle contents]</a>
+      <code class="files"></code><br/>
+      
+      <h4>Messages_pt_PT.properties</h4>
+      <a href="#" class="toggle">[toggle contents]</a>
+      <code class="files"></code><p/><p/><p/>
+      
+      
+      <h3>Examples</h3>
+      <div id="langBox">
+	      Language:
+	      <select id="lang">
+			<option value="browser">Indicated by the browser</option>
+			<option value="en">en</option>
+			<option value="pt">pt</option>
+			<option value="pt_PT" selected>pt_PT</option>
+		  </select>
+		  <span id="langBrowser"></span>
+	  </div>
+      
+      <h4>Accessing values through the map</h4>
+      <ul id="mapExamples"></ul>
+      
+      <h4>Accessing values through a JS variable</h4>
+      <ul id="varExamples"></ul>
+      
    </BODY>
 </HTML>
